@@ -63,7 +63,7 @@ def pytest_runtest_makereport(item, call):
 
 
 def _debug(item, call, report):
-    print('\n')
+    print()
     print("node: ", item.originalname)
     print("when: ", call.when)
     print("outcome: ", report.outcome)
@@ -71,3 +71,12 @@ def _debug(item, call, report):
     print("skipped: ", report.skipped)
     print("failed: ", report.failed)
     print("wasxfail: ", hasattr(report, "wasxfail"))
+    
+    if hasattr(call, 'excinfo') and call.excinfo is not None:
+        print("\nException:")
+        print("type: ", call.excinfo.typename)
+        print("value: ", call.excinfo.value)
+        if hasattr(call.excinfo.value, "msg"):
+            print("msg: ", call.excinfo.value.msg)
+        print("tb: ", call.excinfo.tb)
+        print()
