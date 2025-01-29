@@ -1,15 +1,8 @@
 import pytest
 
 
-def test_1():
-    """
-    Passed test
-    """
-    pass
-
-
 @pytest.mark.xfail(reason="xpassed")
-def test_2():
+def test_1():
     """
     XPpassed with @pytest.mark.xfail
     """
