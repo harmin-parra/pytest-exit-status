@@ -18,14 +18,14 @@ def pytest_sessionfinish(session, exitstatus):
     Exit code 0: All tests are passed, xpassed or skipped and there were no errors.
     Exit code 6: No failed tests but there were xfailed tests or errors.
     """
-    # print(f"\nExit status: {session.exitstatus}")
+    # print(f"\nExit status before: {session.exitstatus}")
     global skipped, failed, xfailed, passed, xpassed, error_setup, error_teardown
     error = error_setup + error_teardown
     if failed + xfailed + error == 0:
         session.exitstatus = 0
     if xfailed + error > 0:
         session.exitstatus = 6
-    # print(f"Exit status: {session.exitstatus}")
+    # print(f"Exit status after: {session.exitstatus}")
     # print(f"{failed} failed, {passed} passed, {skipped} skipped, {xfailed} xfailed, {xpassed} xpassed, {error} errors")
 
 
