@@ -73,7 +73,8 @@ def _debug(item, call, report):
     print("wasxfail: ", hasattr(report, "wasxfail"))
     
     if hasattr(call, 'excinfo') and call.excinfo is not None:
-        print("\nException:")
+        print()
+        print("Exception:")
         print("type: ", call.excinfo.typename)
         print("value: ", call.excinfo.value)
         if hasattr(call.excinfo.value, "msg"):
