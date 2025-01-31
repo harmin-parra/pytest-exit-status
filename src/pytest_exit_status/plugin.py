@@ -70,7 +70,7 @@ def _debug(item, call, report):
     print("passed: ", report.passed)
     print("skipped: ", report.skipped)
     print("failed: ", report.failed)
-    print("wasxfail: ", hasattr(report, "wasxfail"))
+    print("wasxfail: ", report.wasxfail if hasattr(report, "wasxfail") else "None")
     
     if hasattr(call, 'excinfo') and call.excinfo is not None:
         print()
