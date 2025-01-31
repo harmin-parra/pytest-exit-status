@@ -8,7 +8,7 @@ def test_1():
     pass
 
 
-@pytest.mark.xfail(reason="xpassed")
+@pytest.mark.xfail(reason="reason xpassed")
 def test_2():
     """
     XPassed
@@ -16,14 +16,14 @@ def test_2():
     pass
 
 
-@pytest.mark.xfail(reason="xfailure")
+@pytest.mark.xfail(reason="reason xfailure")
 def test_3():
     """
     XFailed with @pytest.mark.xfail
     """
-    assert False
+    x = 2 / 0
 
 
 def test_4():
     """XFailed with pytest.xfail"""
-    pytest.xfail("xfail")
+    pytest.xfail("reason xfail")

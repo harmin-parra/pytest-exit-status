@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.mark.xfail(reason="xfailed")
+@pytest.mark.xfail(reason="reason xfailed")
 def test_1():
     """
     XFailed with @pytest.mark.xfail
@@ -13,4 +13,4 @@ def test_2():
     """
     XFailed with pytest.xfail
     """
-    pytest.xfail("xfail")
+    pytest.xfail("reason xfail")

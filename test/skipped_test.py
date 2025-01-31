@@ -1,7 +1,7 @@
 import pytest
 
 
-@pytest.mark.skip(reason="passed")
+@pytest.mark.skip(reason="reason passed")
 def test_7():
     """
     Skipped with @pytest.mark.skip
@@ -13,4 +13,4 @@ def test_8():
     """
     Skipped with pytest.skip
     """
-    pytest.skip("skip")
+    pytest.skip("reason skip")

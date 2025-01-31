@@ -5,4 +5,4 @@ def test_1():
     """
     Failed test
     """
-    assert False
+    x = 2 / 0

@@ -25,22 +25,22 @@ class TestClass:
         """
         Failed test
         """
-        assert False
+        x = 2 / 0
 
     def test_03(self):
         """
         Failed with pytest.fail
         """
-        pytest.fail("fail")
+        pytest.fail("reason fail")
 
-    @pytest.mark.xfail(reason="xpassed")
+    @pytest.mark.xfail(reason="reason xpassed")
     def test_04(self):
         """
         XPassed
         """
         pass
 
-    @pytest.mark.xfail(reason="xfailure")
+    @pytest.mark.xfail(reason="reason xfailure")
     def test_05(self):
         """
         XFailed with @pytest.mark.xfail
@@ -51,9 +51,9 @@ class TestClass:
         """
         XFailed with pytest.xfail
         """
-        pytest.xfail("xfail")
+        pytest.xfail("reason xfail")
 
-    @pytest.mark.skip(reason="passed")
+    @pytest.mark.skip(reason="reason passed")
     def test_07(self):
         """
         Skipped with @pytest.mark.skip
@@ -64,7 +64,7 @@ class TestClass:
         """
         Skipped with pytest.skip
         """
-        pytest.skip("skip")
+        pytest.skip("reason skip")
 
     def test_09(self, setup):
         """
