@@ -5,8 +5,8 @@
 ![](https://img.shields.io/badge/license-MIT%202.0-blue.svg)
 
 **Pytest** only offers two exit status codes for full test executions (when all collected tests were executed):
-- Exit code **0**: All tests had the `passed`, `xpassed` or `xfailed` outcome.
-- Exit code **1**: Some tests had the `failed` outcome.
+- Exit code **0**: All tests are `passed`, `xpassed` or `skipped` and there were no errors (setup or teardown errors).
+- Exit code **1**: Some tests are `xfailed` or there were some errors (setup or teardown errors).
 
 Some continuous integration tools like **Jenkins** support the `unstable` status and it can be frustrating not to take advantage of this pipeline status to highlight test executions with `xfailed` tests.
 
