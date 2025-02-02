@@ -27,3 +27,18 @@ def test_3():
 def test_4():
     """XFailed with pytest.xfail"""
     pytest.xfail("reason xfail")
+
+
+@pytest.mark.skip(reason="reason passed")
+def test_5():
+    """
+    Skipped with @pytest.mark.skip
+    """
+    pass
+
+
+def test_6():
+    """
+    Skipped with pytest.skip
+    """
+    pytest.skip("reason skip")
