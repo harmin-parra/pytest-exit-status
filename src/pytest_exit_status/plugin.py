@@ -15,8 +15,9 @@ error_teardown = 0
 def pytest_sessionfinish(session, exitstatus):
     """
     Override exit code 0 and add exit code 6.
-    Exit code 0: All tests are passed, xpassed or skipped and there were no errors (setup or teardown errors).
-    Exit code 6: Some tests are xfailed or there were some errors (setup or teardown errors).
+    Exit code 0: All tests are 'passed', 'xpassed' or 'skipped' and there were no errors (setup or teardown errors).
+    Exit code 1: Some tests are 'failed'.
+    Exit code 6: Some tests are 'xfailed' or there were some errors (setup or teardown errors).
     """
     # print(f"\nExit status before: {session.exitstatus}")
     global skipped, failed, xfailed, passed, xpassed, error_setup, error_teardown
