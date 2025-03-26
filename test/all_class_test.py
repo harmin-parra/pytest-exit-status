@@ -53,7 +53,7 @@ class TestClass:
         """
         pytest.xfail("reason xfail")
 
-    @pytest.mark.skip(reason="reason passed")
+    @pytest.mark.skip(reason="reason skipped")
     def test_07(self):
         """
         Skipped with @pytest.mark.skip
@@ -64,7 +64,7 @@ class TestClass:
         """
         Skipped with pytest.skip
         """
-        pytest.skip("reason skip")
+        pytest.skip("reason skipped")
 
     def test_09(self, setup):
         """
