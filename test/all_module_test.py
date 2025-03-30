@@ -24,7 +24,7 @@ def test_02(self):
     """
     Failed test
     """
-    x = 2 / 0
+    assert False
 
 
 def test_03(self):

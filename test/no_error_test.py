@@ -21,7 +21,7 @@ def test_3():
     """
     XFailed with @pytest.mark.xfail
     """
-    x = 2 / 0
+    assert False
 
 
 def test_4():
