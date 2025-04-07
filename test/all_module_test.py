@@ -13,21 +13,21 @@ def teardown():
     assert False
 
 
-def test_01(self):
+def test_01():
     """
     Passed test
     """
     pass
 
 
-def test_02(self):
+def test_02():
     """
     Failed test
     """
     assert False
 
 
-def test_03(self):
+def test_03():
     """
     Failed with pytest.fail
     """
@@ -35,7 +35,7 @@ def test_03(self):
 
 
 @pytest.mark.xfail(reason="reason xpassed")
-def test_04(self):
+def test_04():
     """
     XPassed
     """
@@ -43,14 +43,14 @@ def test_04(self):
 
 
 @pytest.mark.xfail(reason="reason xfailure")
-def test_05(self):
+def test_05():
     """
     XFailed with @pytest.mark.xfail
     """
     assert False
 
 
-def test_06(self):
+def test_06():
     """
     XFailed with pytest.xfail
     """
@@ -58,28 +58,28 @@ def test_06(self):
 
 
 @pytest.mark.skip(reason="reason skipped")
-def test_07(self):
+def test_07():
     """
     Skipped with @pytest.mark.skip
     """
     pass
 
 
-def test_08(self):
+def test_08():
     """
     Skipped with pytest.skip
     """
     pytest.skip("reason skipped")
 
 
-def test_09(self, setup):
+def test_09(setup):
     """
     Setup
     """
     pass
 
 
-def test_10(self, teardown):
+def test_10(teardown):
     """
     Teardown
     """
